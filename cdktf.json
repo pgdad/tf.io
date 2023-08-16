@@ -1,0 +1,17 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "projectId": "d3c128b5-cbce-4122-82df-17cae01d0fb7",
+  "sendCrashReports": "false",
+  "terraformProviders": [],
+  "terraformModules": [
+    {
+      "name": "s3-bucket",
+      "source": "terraform-aws-modules/s3-bucket/aws",
+      "version": "3.14.1"
+    }
+  ],
+  "context": {
+
+  }
+}
