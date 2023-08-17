@@ -8,8 +8,11 @@ class MyStack extends TerraformStack {
     super(scope, id);
 
     // define resources here
-    new S3Bucket(this, id + '-bucket', { providers: new AwsProvider(this, id + '-aws-provider',
-      { region: 'us-east-1', stsRegion: 'us-east-1',}) });
+    new S3Bucket(this, id + '-bucket', { providers: [
+      new AwsProvider(this, id + '-aws-provider',
+      { region: 'us-east-1', stsRegion: 'us-east-1',})
+    ]
+    });
     new TerraformOutput(this, id + '-var', { value: 'value1' });
   }
 }
